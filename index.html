@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MidnightRose - KTV 宣传站</title>
+    <meta
+      name="description"
+      content="MidnightRose KTV 宣传站，浏览精选照片并快速联系。"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <h1>MidnightRose</h1>
+        <p>午夜玫瑰暗黑旅游团</p>
+      </div>
+      <nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#girls">好店好姊妹</a>
+        <a href="#contact">鸭子专区</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <h2>門路，<br />決定你今晚看到的<br />是天堂還是陷阱</h2>
+      </section>
+
+      <section id="girls" class="gallery">
+        <div class="section-title">
+          <h3>精选推荐</h3>
+          <p>点击图片可跳转到对应联系方式或详情页面</p>
+        </div>
+        <div id="card-grid" class="card-grid"></div>
+      </section>
+
+      <section id="about" class="info">
+        <h3>关于我们</h3>
+        <p>
+          这是一个本地可维护的宣传站。后续只需替换图片并修改
+          <code>data/girls.json</code>，页面会自动更新。
+        </p>
+      </section>
+
+      <section id="contact" class="info">
+        <h3>联系我们</h3>
+        <p>Zalo / WhatsApp / Telegram（可在数据文件中替换为你的联系方式）</p>
+      </section>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

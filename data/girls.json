@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "name": "Rose",
+      "image": "./assets/images/rose-01.jpg",
+      "link": "https://example.com/rose",
+      "visible": true
+    },
+    {
+      "name": "Mika",
+      "image": "./assets/images/mika-01.jpg",
+      "link": "https://example.com/mika",
+      "visible": true
+    },
+    {
+      "name": "Nana",
+      "image": "./assets/images/nana-01.jpg",
+      "link": "https://example.com/nana",
+      "visible": true
+    },
+    {
+      "name": "Suki",
+      "image": "./assets/images/suki-01.jpg",
+      "link": "https://example.com/suki",
+      "visible": true
+    }
+  ]
+}

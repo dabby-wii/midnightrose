@@ -1,0 +1,165 @@
+:root {
+  --bg: #7f5d62;
+  --bg-soft: #af9ca0;
+  --text: #131820;
+  --topbar: #825e62;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 12px 18px;
+  background: var(--topbar);
+}
+
+.brand h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: var(--white);
+  font-size: 56px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 8px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: var(--bg-soft);
+  padding: 34px 24px 30px;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 78px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 24px 20px;
+}
+
+.section-title h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: 34px;
+}
+
+.section-title p {
+  margin: 8px 0 20px;
+  color: #eadce0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 26px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card figure {
+  margin: 0;
+  background: #2f2325;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 3.2;
+  object-fit: cover;
+  display: block;
+}
+
+.card figcaption {
+  margin-top: 8px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.info {
+  max-width: 1200px;
+  margin: 0 auto 26px;
+  padding: 0 24px;
+  color: #f0e5e8;
+}
+
+code {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+  .brand h1 {
+    font-size: 42px;
+  }
+  .brand p {
+    font-size: 42px;
+  }
+  .hero h2 {
+    font-size: 58px;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  .hero h2 {
+    font-size: 40px;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
