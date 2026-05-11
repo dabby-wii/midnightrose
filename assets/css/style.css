@@ -11,6 +11,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
@@ -19,9 +26,9 @@ body {
 }
 
 .mobile-home {
-  width: min(100%, 370px);
+  width: min(100%, 390px);
   margin: 0 auto;
-  padding: 10px 0 28px;
+  padding: 0 0 28px;
 }
 
 .topbar {
@@ -124,12 +131,76 @@ body {
 
 .about-image {
   margin-top: 8px;
-  padding: 8px;
+  padding: 6px;
 }
 
 .about-image img {
   width: 100%;
   display: block;
+  height: auto;
+}
+
+.shops-list {
+  background: #b79ea5;
+  padding: 12px 10px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shop-card {
+  background: #ced9d2;
+  border: 2px dashed #88beac;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.shop-card.reverse {
+  flex-direction: row;
+}
+
+.shop-card.no-thumb {
+  display: block;
+}
+
+.shop-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-card-body h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.shop-card.no-thumb .shop-card-body h3 {
+  text-align: center;
+}
+
+.shop-card-body p {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #1e1e1e;
+}
+
+.shop-card-thumb {
+  width: 92px;
+  flex-shrink: 0;
+}
+
+.shop-card-thumb img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
 }
 
 .feature-strip {
@@ -162,8 +233,16 @@ body {
   border-radius: 2px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
   font-weight: 700;
+}
+
+.feature-grid img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .feature-grid span {
@@ -289,23 +368,368 @@ code {
   border-radius: 4px;
 }
 
-@media (min-width: 900px) {
-  .mobile-home {
-    width: min(100%, 860px);
-  }
-  .inner-hero h2 {
-    font-size: 40px;
-  }
-  .inner-hero p {
-    font-size: 14px;
-  }
-  .value-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .card-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .hero h2 {
-    font-size: 52px;
-  }
+body {
+  background: #2a2a2a;
+}
+
+/* === About page: portraits + divider === */
+.people-portraits {
+  background: #9f868d;
+  padding: 12px 10px 6px;
+  margin-top: 8px;
+}
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.portrait-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  background: #2f2325;
+}
+
+.floral-divider {
+  display: block;
+  width: 70%;
+  margin: 12px auto 4px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* === About page: people cards === */
+.people-divider {
+  text-align: center;
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 0 2px;
+  letter-spacing: 2px;
+}
+
+.people-card {
+  background: #ced9d2;
+  border: 2px dashed #88beac;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.people-card-thumb {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.people-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.people-card-body {
+  width: 100%;
+}
+
+.people-card-body h3 {
+  margin: 0 0 2px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e1e1e;
+}
+
+.people-card-body .role {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #387fa5;
+}
+
+.people-card-body p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #1e1e1e;
+}
+
+.people-mini-grid {
+  background: #b79ea5;
+  padding: 12px 10px 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 0;
+}
+
+.people-mini-card {
+  background: #ced9d2;
+  border: 2px dashed #88beac;
+  border-radius: 10px;
+  padding: 12px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.people-mini-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.people-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.people-mini-card h4 {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1e1e;
+}
+
+.people-mini-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.people-mini-tag {
+  display: inline-block;
+  margin-top: 4px;
+  color: #f24822;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* === Ducks page === */
+.tag-pill {
+  display: inline-block;
+  background: #cedfd9;
+  border: 2px solid #87c0ac;
+  border-radius: 6px;
+  color: #387fa5;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+.pink-title {
+  margin: 4px 0;
+  color: #ffc2ec;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.pink-title.small {
+  font-size: 28px;
+}
+
+.ducks-headline {
+  background: #5f5449;
+  padding: 14px 12px 18px;
+  margin-top: 8px;
+}
+
+.ducks-audience {
+  background: #b79ea5;
+  padding: 12px 10px 16px;
+  margin-top: 8px;
+}
+
+.ducks-audience h4 {
+  margin: 0 0 10px;
+  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.audience-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.audience-grid li {
+  background: #ced9d2;
+  border: 2px dashed #88beac;
+  border-radius: 8px;
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.audience-grid img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.audience-grid span {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 700;
+  color: #1e1e1e;
+  line-height: 1.2;
+}
+
+.ducks-services {
+  background: #5f5449;
+  padding: 12px 10px 16px;
+  margin-top: 8px;
+}
+
+.service-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.service-card {
+  background: #322d29;
+  border: 4px solid #5f5449;
+  border-radius: 6px;
+  padding: 10px 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.service-card img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.service-card h5 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.ducks-night {
+  background: #b79ea5;
+  padding: 14px 12px 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.night-copy {
+  margin: 10px 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.night-tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+
+.night-tags span {
+  background: #fff;
+  color: #1e1e1e;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.night-card {
+  background: #f5fbff;
+  border: 2px solid #c2e5ff;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+}
+
+.night-card p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e1e1e;
+}
+
+.ducks-stats {
+  background: #322d29;
+  padding: 16px 12px 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.stats-headline {
+  margin: 10px 0 0;
+  color: #ffc2ec;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.stats-sub {
+  margin: 8px 0 10px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.stats-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-grid strong {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.stats-grid span {
+  color: #fff;
+  font-size: 11px;
+  margin-top: 2px;
 }
