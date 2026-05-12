@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)"
+    ]
+  }
+}
