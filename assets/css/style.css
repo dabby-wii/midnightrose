@@ -1874,6 +1874,8 @@ body {
   .page-home .reasons-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .page-home .reason-card {
     grid-column: span 2;
