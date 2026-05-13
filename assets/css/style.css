@@ -82,7 +82,7 @@ body {
   min-height: 330px;
   width: 100%;
   background-image: url("../images/banners/hero-banner.png");
-  background-position: center center !important;
+  background-position: right center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: relative;
@@ -90,11 +90,23 @@ body {
   align-items: flex-end;
 }
 
+@media (min-width: 1024px) {
+  .hero {
+    background-position: center center !important;
+  }
+}
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.25));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+@media (min-width: 1024px) {
+  .hero::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.25));
+  }
 }
 
 .hero-content {
@@ -108,7 +120,7 @@ body {
 
 .hero h2 {
   margin: 0;
-  color: #ffffff;
+  color: #d6f4ff;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   font-size: 24px;
   line-height: 1.1;
@@ -2257,7 +2269,7 @@ body {
     padding: 40px 48px 48px;
   }
   .page-ducks .treat-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     gap: 40px;
     align-items: center;
   }
@@ -2278,12 +2290,12 @@ body {
     border-radius: 8px;
   }
   .page-ducks .treat-card {
-    padding: 36px 28px;
+    padding: 28px 24px;
   }
   .page-ducks .treat-card p {
-    font-size: 16px;
-    line-height: 1.85;
-    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 1.9;
+    margin-bottom: 20px;
   }
 
   /* Audience (超高隱密性 + 5 silhouettes) */
