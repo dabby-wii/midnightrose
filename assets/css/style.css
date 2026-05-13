@@ -1547,3 +1547,736 @@ body {
   font-size: 11px;
   margin-top: 2px;
 }
+
+/* ============================================================
+   Desktop layout (>= 1024px) — index.html only via .page-home
+   ============================================================ */
+@media (min-width: 1024px) {
+  .page-home .mobile-home,
+  .page-about .mobile-home,
+  .page-girls .mobile-home,
+  .page-ducks .mobile-home {
+    width: min(100%, 960px);
+    padding: 0 0 48px;
+  }
+
+  /* === Topbar / nav === */
+  .page-home .topbar,
+  .page-about .topbar,
+  .page-girls .topbar,
+  .page-ducks .topbar {
+    padding: 16px 32px;
+  }
+  .page-home .brand h1,
+  .page-about .brand h1,
+  .page-girls .brand h1,
+  .page-ducks .brand h1 {
+    font-size: 16px;
+  }
+  .page-home .brand p,
+  .page-about .brand p,
+  .page-girls .brand p,
+  .page-ducks .brand p {
+    font-size: 28px;
+    margin-top: 4px;
+  }
+  .page-home .main-nav,
+  .page-about .main-nav,
+  .page-girls .main-nav,
+  .page-ducks .main-nav {
+    gap: 24px;
+  }
+  .page-home .main-nav a,
+  .page-about .main-nav a,
+  .page-girls .main-nav a,
+  .page-ducks .main-nav a {
+    font-size: 16px;
+  }
+
+  /* === Hero === */
+  .page-home .hero {
+    min-height: 520px;
+  }
+  .page-home .hero-content {
+    padding: 48px 64px;
+    width: 100%;
+  }
+  .page-home .hero h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    max-width: 600px;
+  }
+  .page-home .hero-cta {
+    font-size: 18px;
+    padding: 14px 24px;
+    margin-top: 24px;
+    border-radius: 4px;
+  }
+
+  /* === Feature strip (適合人群) === */
+  .page-home .feature-strip {
+    padding: 36px 40px 28px;
+  }
+  .page-home .feature-strip h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .page-home .feature-grid {
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .page-home .feature-grid-img-container {
+    width: 140px;
+    height: 140px;
+  }
+  .page-home .feature-grid img {
+    width: 84px;
+    height: 84px;
+  }
+  .page-home .feature-grid article:nth-child(1) img {
+    width: 116px;
+    height: 116px;
+  }
+  .page-home .feature-grid article:nth-child(2) img {
+    width: 100px;
+    height: 100px;
+  }
+  .page-home .feature-grid article:nth-child(3) img {
+    width: 134px;
+    height: 134px;
+  }
+  .page-home .feature-grid article:nth-child(4) img {
+    width: 90px;
+    height: 90px;
+  }
+  .page-home .feature-grid span {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+  .page-home .feature-cards {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    padding: 28px 0 0;
+  }
+  .page-home .feature-card {
+    padding: 16px;
+  }
+  .page-home .feature-card-header img {
+    width: 48px;
+    height: 48px;
+  }
+  .page-home .feature-card-header h4 {
+    font-size: 18px;
+  }
+  .page-home .feature-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* === Pink CTA === */
+  .page-home .pink-cta {
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .page-home .pink-cta h3 {
+    font-size: 46px;
+    margin: 0 auto 18px;
+    display: inline-block;
+    text-align: left;
+  }
+  .page-home .pink-cta-lead {
+    display: block;
+    width: 420px;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto 24px;
+  }
+  .page-home .pink-cta-action {
+    position: relative;
+    display: block;
+  }
+  .page-home .pink-cta-action p {
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+    flex: initial;
+    text-align: left;
+  }
+  .page-home .pink-cta-action a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .page-home .pink-cta p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .page-home .pink-cta-lead {
+    margin-bottom: 24px;
+  }
+  .page-home .pink-cta-action {
+    align-items: center;
+  }
+  .page-home .pink-cta a {
+    font-size: 18px;
+    padding: 14px 26px;
+    border-radius: 8px;
+  }
+
+  /* === Gallery === */
+  .page-home .gallery {
+    padding: 36px 40px 0;
+  }
+  .page-home .gallery-title h3 {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+  .page-home .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .page-home .gallery-grid img.chat {
+    width: 92%;
+  }
+  .page-home .gallery-grid img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .page-home .gallery-grid img:nth-child(5) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .page-home .gallery-cta {
+    margin: 28px -40px 0;
+    padding: 28px 56px;
+  }
+  .page-home .gallery-cta p {
+    font-size: 30px;
+  }
+  .page-home .gallery-cta a {
+    font-size: 18px;
+    padding: 14px 26px;
+    border-radius: 8px;
+  }
+
+  /* === Process strip === */
+  .page-home .process-strip {
+    padding: 48px 40px 40px;
+  }
+  .page-home .process-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  .page-home .process-steps {
+    gap: 16px;
+  }
+  .page-home .step {
+    font-size: 18px;
+    gap: 12px;
+  }
+  .page-home .step img {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* === Compare tables === */
+  .page-home .compare-strip {
+    padding: 36px 40px 32px;
+  }
+  .page-home .compare-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .page-home .compare-table {
+    font-size: 16px;
+  }
+  .page-home .compare-table th,
+  .page-home .compare-table td {
+    padding: 16px 14px;
+  }
+  .page-home .compare-table-4col th,
+  .page-home .compare-table-4col td {
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+  .page-home .compare-table .crown {
+    font-size: 18px;
+  }
+
+  /* === Reasons === */
+  .page-home .reasons-strip {
+    padding: 40px 40px 32px;
+  }
+  .page-home .reasons-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+  .page-home .reasons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .page-home .reason-card {
+    padding: 20px;
+    gap: 12px;
+  }
+  .page-home .reason-header img {
+    width: 48px;
+    height: 48px;
+  }
+  .page-home .reason-header h4 {
+    font-size: 18px;
+  }
+  .page-home .reason-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* === Services === */
+  .page-home .services-strip {
+    padding: 48px 40px 40px;
+  }
+  .page-home .services-title {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+  .page-home .services-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .page-home .services-grid .service-card {
+    grid-column: span 2;
+    padding: 20px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .page-home .services-grid .service-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .page-home .services-grid .service-card:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+  .page-home .services-grid .service-card img {
+    width: 88px;
+    height: 96px;
+    object-position: center bottom;
+    margin: 0 0 20px;
+    flex-shrink: 0;
+  }
+  .page-home .services-grid .service-card h4 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    min-height: 34px;
+    flex-shrink: 0;
+  }
+  .page-home .services-grid .service-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .page-home .services-grid .service-card:first-child img {
+    width: 96px;
+  }
+  .page-home .services-grid .service-card:nth-child(2) img {
+    width: 78px;
+  }
+  .page-home .services-guarantee {
+    padding: 16px 0 0;
+  }
+  .page-home .services-guarantee h3 {
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+  .page-home .services-guarantee p {
+    font-size: 26px;
+    line-height: 2;
+  }
+
+  /* === FAQ === */
+  .page-home .faq-strip {
+    padding: 48px 80px 56px;
+  }
+  .page-home .faq-title {
+    font-size: 36px;
+    margin-bottom: 28px;
+  }
+  .page-home .faq-list {
+    gap: 12px;
+  }
+  .page-home .faq-item summary {
+    font-size: 16px;
+    padding: 18px 22px;
+    border-radius: 6px;
+  }
+  .page-home .faq-item summary::before {
+    font-size: 20px;
+  }
+  .page-home .faq-item .faq-answer {
+    font-size: 14px;
+    padding: 20px 24px;
+    line-height: 1.8;
+    border-radius: 6px;
+  }
+
+  /* === Final strip === */
+  .page-home .final-strip {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 32px;
+    padding: 48px 56px;
+    align-items: center;
+  }
+  .page-home .final-photos {
+    grid-template-rows: 1fr;
+    gap: 12px;
+  }
+  .page-home .final-photos img {
+    aspect-ratio: 3 / 4;
+  }
+  .page-home .final-photos img:nth-child(2) {
+    display: none;
+  }
+  .page-home .final-title {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  .page-home .final-lead {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+  .page-home .final-since {
+    font-size: 16px;
+    margin-top: 48px;
+    margin-bottom: 14px;
+  }
+  .page-home .final-stats {
+    margin-bottom: 28px;
+  }
+  .page-home .final-stats .stat-num {
+    font-size: 40px;
+  }
+  .page-home .final-stats .stat-label {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .page-home .final-btn {
+    font-size: 20px;
+    padding: 18px 24px;
+    border-radius: 12px;
+  }
+
+  /* ============================================================
+     About page — desktop layout
+     ============================================================ */
+  .page-about .inner-hero {
+    padding: 56px 64px 64px;
+    text-align: center;
+  }
+  .page-about .inner-hero h2 {
+    font-size: 48px;
+    line-height: 1.35;
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* Portrait grid (4 photos) */
+  .page-about .people-portraits {
+    padding: 36px 40px 24px;
+  }
+  .page-about .portrait-grid {
+    gap: 16px;
+  }
+  .page-about .portrait-grid img {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Floral divider already enlarged via base rule */
+
+  /* People cards (Dabby / 越南大婊哥) — alternating left/right */
+  .page-about .shops-list {
+    padding: 32px 40px 36px;
+    gap: 28px;
+  }
+  .page-about .people-card {
+    flex-direction: row;
+    padding: 28px 36px;
+    gap: 36px;
+    align-items: center;
+  }
+  .page-about .people-card:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .page-about .people-card-thumb {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+  .page-about .people-card-body {
+    flex: 1;
+  }
+  .page-about .people-card-body h3 {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+  .page-about .people-card-body .role {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 14px;
+  }
+  .page-about .people-card-body p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  /* Mini grid (Jerry / 老崔 / 道友霖 / Chika) — 4 columns */
+  .page-about .people-mini-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    padding: 28px 40px 40px;
+    background: #9B6A6C;
+  }
+  .page-about .people-mini-card {
+    padding: 24px 14px 20px;
+    gap: 10px;
+  }
+  .page-about .people-mini-thumb {
+    width: 96px;
+    height: 96px;
+  }
+  .page-about .people-mini-card h4 {
+    font-size: 28px;
+    margin-top: 4px;
+  }
+  .page-about .people-mini-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .page-about .people-mini-tag {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  /* ============================================================
+     Girls page — desktop layout
+     ============================================================ */
+  .page-girls .shops-list {
+    padding: 36px 40px 48px;
+    gap: 28px;
+  }
+
+  .page-girls .shop-card {
+    padding: 28px 36px;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .page-girls .shop-card.no-thumb {
+    padding: 32px 48px;
+  }
+
+  .page-girls .shop-card-thumb {
+    width: 260px;
+    flex-shrink: 0;
+  }
+
+  .page-girls .shop-card-thumb img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+  }
+
+  .page-girls .shop-card-body h3 {
+    font-size: 36px;
+    margin: 0 0 14px;
+  }
+
+  .page-girls .shop-card-body p {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+
+  .page-girls .shop-card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ============================================================
+     Ducks page — desktop layout
+     ============================================================ */
+  /* Cast grid (top 4 portraits) */
+  .page-ducks .ducks-cast {
+    padding: 32px 40px 24px;
+  }
+  .page-ducks .cast-grid {
+    gap: 14px;
+  }
+  .page-ducks .cast-grid img {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Feature banner (就是這麼帥) */
+  .page-ducks .ducks-feature {
+    padding: 16px 40px 40px;
+  }
+  .page-ducks .feature-banner {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+  }
+  .page-ducks .feature-overlay {
+    padding: 40px 56px;
+  }
+  .page-ducks .feature-headline {
+    font-size: 120px;
+    margin-bottom: 20px;
+  }
+  .page-ducks .feature-tagline {
+    font-size: 22px;
+  }
+
+  /* Treat (出國鬆一下 + 白色卡片) */
+  .page-ducks .ducks-treat {
+    padding: 40px 48px 48px;
+  }
+  .page-ducks .treat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .page-ducks .treat-eyebrow {
+    font-size: 18px;
+    margin: 0 0 20px;
+    white-space: normal;
+  }
+  .page-ducks .treat-headline {
+    font-size: 56px;
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+  .page-ducks .treat-btn {
+    align-self: flex-end;
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 8px;
+  }
+  .page-ducks .treat-card {
+    padding: 36px 28px;
+  }
+  .page-ducks .treat-card p {
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+
+  /* Audience (超高隱密性 + 5 silhouettes) */
+  .page-ducks .ducks-audience {
+    padding: 40px 48px 48px;
+  }
+  .page-ducks .audience-headline {
+    font-size: 56px;
+    line-height: 1.2;
+    margin: 8px 0 24px;
+  }
+  .page-ducks .ducks-audience h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .page-ducks .audience-grid {
+    gap: 16px;
+  }
+  .page-ducks .audience-grid img {
+    width: 96px;
+    height: 96px;
+  }
+  .page-ducks .audience-grid span {
+    font-size: 16px;
+  }
+
+  /* Services (我們提供 + 6 cards 3x2) */
+  .page-ducks .ducks-services {
+    padding: 48px 40px;
+  }
+  .page-ducks .ducks-services .pink-title.small {
+    font-size: 44px;
+    margin-bottom: 28px;
+  }
+  .page-ducks .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .page-ducks .service-grid .service-card {
+    padding: 32px 18px 28px;
+  }
+  .page-ducks .service-grid .service-card img,
+  .page-ducks .service-grid .service-card:nth-child(1) img,
+  .page-ducks .service-grid .service-card:nth-child(3) img,
+  .page-ducks .service-grid .service-card:nth-child(4) img,
+  .page-ducks .service-grid .service-card:nth-child(5) img,
+  .page-ducks .service-grid .service-card:nth-child(6) img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 14px;
+  }
+  .page-ducks .service-grid .service-card:nth-child(2) img {
+    width: 70px;
+  }
+  .page-ducks .service-grid .service-card h5 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .page-ducks .service-grid .service-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .page-ducks .ducks-services-cta {
+    font-size: 18px;
+    padding: 14px 28px;
+    margin-top: 32px;
+    border-radius: 8px;
+  }
+
+  /* Stats (明天可以後悔 + 35+/234+/179+) */
+  .page-ducks .ducks-stats {
+    padding: 48px 64px 56px;
+    text-align: center;
+  }
+  .page-ducks .ducks-stats .tag-pill {
+    font-size: 18px;
+    padding: 14px 28px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+  .page-ducks .stats-headline {
+    font-size: 40px;
+    margin: 16px 0 24px;
+  }
+  .page-ducks .night-copy {
+    font-size: 18px;
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+  .page-ducks .stats-sub {
+    font-size: 18px;
+    margin: 16px 0 20px;
+  }
+  .page-ducks .stats-grid {
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .page-ducks .stats-grid strong {
+    font-size: 44px;
+  }
+  .page-ducks .stats-grid span {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+}
+
