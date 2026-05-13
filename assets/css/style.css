@@ -1006,8 +1006,8 @@ body {
 
 .floral-divider {
   display: block;
-  width: 70%;
-  margin: 12px auto 4px;
+  width: calc(92% + 10px);
+  margin: 28px auto 16px;
   height: auto;
   mix-blend-mode: multiply;
 }
@@ -1150,6 +1150,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   padding: 4px 10px;
+  text-decoration: none;
 }
 
 .pink-title {
