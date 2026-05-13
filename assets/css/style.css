@@ -1110,6 +1110,11 @@ body {
   background: transparent;
 }
 
+.people-card:first-child .people-card-thumb {
+  width: 140px;
+  height: 140px;
+}
+
 .people-card-thumb img {
   width: 100%;
   height: 100%;
