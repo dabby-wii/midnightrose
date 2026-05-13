@@ -1556,7 +1556,7 @@ body {
   .page-about .mobile-home,
   .page-girls .mobile-home,
   .page-ducks .mobile-home {
-    width: min(100%, 960px);
+    width: 100%;
     padding: 0 0 48px;
   }
 
