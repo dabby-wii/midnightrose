@@ -1115,7 +1115,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .people-card-body {
@@ -1179,11 +1178,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  mix-blend-mode: multiply;
-}
-
-.people-mini-thumb img[alt="Chika"] {
-  transform: scale(0.95);
 }
 
 .people-mini-card h4 {

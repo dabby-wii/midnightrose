@@ -86,3 +86,57 @@ function setupFeatureIconLinks() {
 }
 
 setupFeatureIconLinks();
+
+function setupCountUp() {
+  const elements = document.querySelectorAll(
+    ".final-stats .stat-num, .stats-grid strong"
+  );
+  if (!elements.length) return;
+
+  const targets = new Map();
+  elements.forEach((el) => {
+    const match = el.textContent.trim().match(/(\d+)(\+?)/);
+    if (!match) return;
+    const target = parseInt(match[1], 10);
+    const suffix = match[2] || "";
+    targets.set(el, { target, suffix });
+    el.textContent = "0" + suffix;
+  });
+
+  const animate = (el) => {
+    const info = targets.get(el);
+    if (!info) return;
+    const { target, suffix } = info;
+    const duration = 1500;
+    const start = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * target);
+      el.textContent = current + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix;
+      }
+    };
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+setupCountUp();
