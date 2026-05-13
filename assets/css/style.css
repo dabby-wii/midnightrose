@@ -1874,8 +1874,38 @@ body {
   .page-home .reasons-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 16px;
+  }
+
+  /* === Cap content widths on wide screens === */
+  .page-home .feature-grid,
+  .page-home .feature-cards,
+  .page-home .gallery-grid,
+  .page-home .process-steps,
+  .page-home .compare-wrap,
+  .page-home .reasons-grid,
+  .page-home .services-grid,
+  .page-home .faq-list,
+  .page-about .portrait-grid,
+  .page-ducks .cast-grid,
+  .page-ducks .feature-banner,
+  .page-ducks .treat-grid,
+  .page-ducks .audience-grid,
+  .page-ducks .service-grid {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section-level lists (shops/mini grid are themselves the section bg)
+     — centre and cap the cards instead of the container */
+  .page-about .shops-list,
+  .page-girls .shops-list {
+    align-items: center;
+  }
+  .page-about .shops-list > article,
+  .page-girls .shops-list > article {
+    width: 100%;
+    max-width: 1200px;
   }
   .page-home .reason-card {
     grid-column: span 2;
@@ -2112,7 +2142,10 @@ body {
   .page-about .people-mini-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
-    padding: 28px 40px 40px;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    padding-left: max(40px, calc((100% - 1200px) / 2));
+    padding-right: max(40px, calc((100% - 1200px) / 2));
     background: #9B6A6C;
   }
   .page-about .people-mini-card {
