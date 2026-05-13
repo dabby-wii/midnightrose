@@ -55,3 +55,34 @@ function setupBackToTop() {
 }
 
 setupBackToTop();
+
+function setupFeatureIconLinks() {
+  const icons = document.querySelectorAll(".feature-grid article");
+  const cards = document.querySelectorAll(".feature-cards .feature-card");
+  if (!icons.length || !cards.length) return;
+
+  icons.forEach((icon, index) => {
+    const target = cards[index];
+    if (!target) return;
+    icon.setAttribute("role", "button");
+    icon.setAttribute("tabindex", "0");
+
+    const goToCard = () => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    };
+
+    icon.addEventListener("click", goToCard);
+    icon.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        goToCard();
+      }
+    });
+  });
+}
+
+setupFeatureIconLinks();
