@@ -2125,6 +2125,10 @@ body {
     height: 200px;
     flex-shrink: 0;
   }
+  .page-about .people-card:first-child .people-card-thumb {
+    width: 280px;
+    height: 280px;
+  }
   .page-about .people-card-body {
     flex: 1;
   }
