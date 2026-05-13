@@ -34,3 +34,24 @@ async function loadCards() {
 }
 
 loadCards();
+
+function setupBackToTop() {
+  const btn = document.createElement("button");
+  btn.className = "back-to-top";
+  btn.type = "button";
+  btn.setAttribute("aria-label", "回到頂部");
+  btn.innerHTML = "&#8593;";
+  document.body.appendChild(btn);
+
+  const onScroll = () => {
+    btn.classList.toggle("visible", window.scrollY > 300);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+setupBackToTop();

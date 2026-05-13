@@ -978,6 +978,48 @@ code {
   border-radius: 4px;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #7f5d62;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #6a4a4f;
+}
+
+@media (min-width: 1024px) {
+  .back-to-top {
+    width: 56px;
+    height: 56px;
+    right: 32px;
+    bottom: 32px;
+    font-size: 26px;
+  }
+}
+
 body {
   background: #2a2a2a;
 }
@@ -1557,7 +1599,7 @@ body {
   .page-girls .mobile-home,
   .page-ducks .mobile-home {
     width: 100%;
-    padding: 0 0 48px;
+    padding: 0;
   }
 
   /* === Topbar / nav === */
@@ -1812,23 +1854,35 @@ body {
     margin-bottom: 28px;
   }
   .page-home .reasons-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 16px;
   }
   .page-home .reason-card {
-    padding: 20px;
-    gap: 12px;
+    grid-column: span 2;
+    padding: 56px 40px 40px;
+    gap: 28px;
+    aspect-ratio: 1;
+  }
+  .page-home .reason-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .page-home .reason-card:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+  .page-home .reason-header {
+    gap: 14px;
   }
   .page-home .reason-header img {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
   .page-home .reason-header h4 {
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 1.35;
   }
   .page-home .reason-card p {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.85;
   }
 
   /* === Services === */
@@ -2071,13 +2125,17 @@ body {
   }
 
   .page-girls .shop-card {
-    padding: 28px 36px;
+    padding: 36px 36px 32px;
     gap: 36px;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .page-girls .shop-card.no-thumb {
     padding: 32px 48px;
+  }
+
+  .page-girls .shop-card-body {
+    padding-top: 12px;
   }
 
   .page-girls .shop-card-thumb {
